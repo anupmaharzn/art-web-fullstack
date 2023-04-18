@@ -1,0 +1,27 @@
+{
+    
+    "customer":{
+        "name":"anup maharjan",
+        "address":"lubhu",
+        "contact_no":"1234567890",
+        "city":"hello",
+        "country":"123445",
+        "postal_code":"44307"
+    },
+    
+    "order_items":[
+        {
+            "product_id":1,
+            "name":"product1",
+            "quantity":3,
+            "price":600
+        },
+         {
+            "product_id":2,
+            "name":"product2",
+            "quantity":2,
+            "price":600
+        }
+    ]
+
+}

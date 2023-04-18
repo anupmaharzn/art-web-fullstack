@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  mysql_srv:
+    image: mysql:8.0
+    container_name: mysql_ctr
+    restart: always
+    environment:
+      MYSQL_DATABASE: art_webapp
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_USER: anup
+      MYSQL_PASSWORD: anup
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/conf.d:/etc/mysql/conf.d
+      - ./data/logs:/logs
+      - /usr/local/var/mysql:/var/lib/mysql
+  
+  phpmyadmin_srv:
+    depends_on:
+      - mysql_srv
+    image: phpmyadmin/phpmyadmin
+    container_name: phpadmin_ctr
+    restart: always
+    environment:
+      PMA_HOST: mysql_srv
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 8080:80
+
+  backend_srv:
+    container_name: art-backend-ctr
+    restart: unless-stopped
+    build:
+      context: ./art-web-backend
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql_srv
+    environment:
+      MYSQL_HOST: mysql_srv
+      MYSQL_USER: anup
+      MYSQL_DATABASE: art_webapp
+      MYSQL_PASSWORD: anup
+    ports:
+      - 5000:5000
+    links:
+      - mysql_srv:mysql_srv
+    volumes:
+      - ./art-web-backend:/opt/app/backend
+  
+  frontend_srv:
+    container_name: art-frontend-ctr
+    restart: unless-stopped
+    build: 
+      context: ./art-web-frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend_srv
+    ports:
+      - 3000:3000
+    volumes:
+      - ./art-web-frontend:/opt/app/frontend

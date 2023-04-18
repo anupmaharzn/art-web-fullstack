@@ -1,0 +1,13 @@
+.orderSummary-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #000;
+  box-shadow: 9px 9px 0 0 #000;
+  margin: 1rem auto;
+  font-size: 26px;
+  font-weight: 600;
+  max-width: 60%;
+  height: 400px;
+}

@@ -1,0 +1,38 @@
+.footer-outline {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-left {
+    .logo {
+      svg {
+        width: 100px;
+        height: 65px;
+      }
+    }
+    .label {
+      margin-left: 0.5rem;
+      font-size: var(--text-xs);
+      line-height: 20px;
+      color: var(--black-fade);
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+//media query
+
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+  }
+}

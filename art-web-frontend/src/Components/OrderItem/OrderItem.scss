@@ -1,0 +1,46 @@
+.orderitem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid var(--black-outline);
+  border-bottom: 1px solid var(--black-outline);
+  padding: 1rem;
+  margin: 1rem;
+  &-orderid,
+  &-productid {
+    font-size: var(--text-xs);
+    color: #5e5e5e;
+    &:hover {
+      color: #5e5e5e;
+    }
+  }
+  &-name {
+    font-size: var(--text-xs);
+    color: #5e5e5e;
+    &:hover {
+      color: #5e5e5e;
+    }
+  }
+  &-price {
+    color: var(--black-secondary);
+    font-size: var(--text-xs);
+    font-weight: 500;
+  }
+  &-quantity {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 4px;
+    color: var(--white);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    background-color: var(--black-primary);
+  }
+  &-total {
+    color: var(--black-secondary);
+    font-size: var(--text-xs);
+    font-weight: 500;
+  }
+}

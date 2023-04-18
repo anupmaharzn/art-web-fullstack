@@ -1,0 +1,37 @@
+.categoryTile {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black-outline);
+  transition: all ease-in-out 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: rgb(217, 255, 255);
+    transform: scale(1.01);
+  }
+  &__id {
+    margin-left: 10px;
+  }
+
+  &__name {
+    margin-left: 100px;
+  }
+
+  &__icon1,
+  &__icon2 {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  &__icon1 {
+    margin-left: 10px;
+  }
+
+  &__icon2 {
+    margin-right: 20px;
+  }
+}

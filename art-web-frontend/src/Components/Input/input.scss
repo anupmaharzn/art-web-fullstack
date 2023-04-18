@@ -1,0 +1,12 @@
+.inputfield {
+  outline: none;
+  border: none;
+  border: 1px solid var(--black-secondary);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  color: rgb(20, 20, 20);
+  &:focus {
+    border: 1px solid var(--black-fade);
+  }
+}

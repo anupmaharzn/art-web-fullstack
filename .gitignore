@@ -1,0 +1,7 @@
+/conf/
+/data/
+/logs/
+
+art-web-backend/node_modules
+art-web-backend/node_modules/.env
+art-web-frontend/node_modules

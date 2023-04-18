@@ -1,0 +1,131 @@
+.shipping-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.form-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  label {
+    color: var(--black-primary);
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  select {
+    border: 1px solid var(--black-secondary);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: var(--white);
+  }
+  p {
+    color: rgb(237, 70, 70);
+    font-size: 13px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.order-section {
+  padding-left: 2rem;
+  border-left: 1px solid var(--black-outline);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headings {
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--black-outline);
+}
+.orderlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--black-outline);
+  padding: 1rem 0;
+  &-name {
+    font-size: 13px;
+  }
+  &-quantity {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  &-price {
+    font-size: 13px;
+  }
+}
+.subtotal,
+.shipping {
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--black-primary);
+  }
+  span {
+    font-size: 13px;
+    color: var(--black-primary);
+  }
+  border-bottom: 1px solid var(--black-outline);
+  padding: 1rem 0;
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+//media query
+@media screen and (max-width: 767px) {
+  .shipping-container {
+    grid-template-columns: 1fr;
+  }
+  .order-section {
+    padding-top: 2rem;
+    border-top: 1px solid var(--black-outline);
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+  }
+}

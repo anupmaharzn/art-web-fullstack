@@ -1,0 +1,51 @@
+.OrderTile {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black-outline);
+  transition: all ease-in-out 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black-primary);
+
+  &:hover {
+    background-color: rgb(217, 255, 255);
+    transform: scale(1.01);
+    color: var(--black-primary);
+  }
+  &__id {
+    margin-left: 10px;
+  }
+
+  &__customer {
+    margin-left: 150px;
+  }
+
+  &__price {
+    margin-left: 150px;
+  }
+  &__status {
+    margin-left: 150px;
+  }
+  &__icon1,
+  &__icon2 {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  &__icon1 {
+    margin-left: 100px;
+  }
+  &__icon2 {
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+  button {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: white;
+  }
+}
